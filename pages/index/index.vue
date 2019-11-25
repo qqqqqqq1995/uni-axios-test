@@ -21,6 +21,11 @@
 			this.$api.get200().then(res => {
 				console.log(res)
 				this.title = res.data
+			}).then(() => {
+				this.$api.post200().then(res => {
+					console.log(res)
+					this.title = res.data
+				})
 			})
 		},
 		methods: {
